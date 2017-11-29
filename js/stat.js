@@ -16,17 +16,17 @@ window.renderStatistics = function (ctx, names, times) {
 	ctx.fillText('Список результатов:', 120, 60);
 
 	var max = -1;
-    var maxIndex = -1;
+  var maxIndex = -1;
 
-    ctx.fillStyle = 'blue';
-    for (var i = 0; i < times.length; i++) {
-       var time = times[i];
+  ctx.fillStyle = 'blue';
+  for (var i = 0; i < times.length; i++) {
+      var time = times[i];
 
-       if(time > max){
+      if (time > max) {
           max = time;
           maxIndex = i;
-        }
-    }
+      }
+  }
 
 	var histogramHeight = 150;
 	var step = histogramHeight / (max - 0);
@@ -38,14 +38,14 @@ window.renderStatistics = function (ctx, names, times) {
 	var bais = 100;
 	var width = 40;
 
-    for(var i = 0; i < times.length; i++) {
+  for(var i = 0; i < times.length; i++) {
 	   var randomOpacity = function (minValue, maxValue) {
 		  return Math.random() * (maxValue - minValue) + minValue;
 	    };
 
 	   if(names[i] === 'Вы'){
-		  ctx.fillStyle = 'rgba(255, 0, 0, 1)';
-		}else {
+       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+		 }else {
        ctx.fillStyle = 'rgba(0, 0, 255, ' + randomOpacity(0.5, 1) + ')';
 	   }
 
