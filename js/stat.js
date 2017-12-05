@@ -5,7 +5,7 @@ window.renderStatistics = function (ctx, names, times) {
 	ctx.strokeRect(110, 20, 420, 270);
 	ctx.fillRect(110, 20, 420, 270);
 
-	ctx.fillStyle = 'orange';
+	ctx.fillStyle = 'white';
 	ctx.strokeRect(100, 10, 420, 270);
 	ctx.fillRect(100, 10, 420, 270);
 
